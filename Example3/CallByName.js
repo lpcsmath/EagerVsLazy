@@ -7,7 +7,7 @@ function f (a, b, c, d, e, g, h, i, j, k, l, m, n, o, p, q, r, s, t) {
    if (a() < 2) return b() + b();
    if (a() < 4) return c() + c();
    if (a() < 6) return d() + d();
-   if (a() < 7) return e() + f();
+   if (a() < 7) return e() + g();
    if (a() < 8) return g() + h();
    if (a() < 10) return i() + j() + k();
    if (a() < 12) return l() + m() + n();
