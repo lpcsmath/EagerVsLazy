@@ -67,8 +67,6 @@ var println = function (x) {
     console.log(x);
 };
 
-println(StreamToList(StreamTake(5, nats)));
-
 // StreamForEach(println, StreamTake(10, nats));
 //
 // var double = function (x) { return x + x; };
@@ -83,8 +81,13 @@ println(StreamToList(StreamTake(5, nats)));
 //
 // StreamForEach(println, StreamTake(10, fib));
 //
-// var ones = new Stream(1, function() {return ones;});
-// var nats = new Stream(0, function() {return AddStreams(ones,nats);});
+
+var ones = new Stream(1, function() {return ones;});
+var nats = new Stream(0, function() {return AddStreams(ones,nats);});
+
+println(StreamToList(StreamTake(5, ones)));
+println(StreamToList(StreamTake(5, nats)));
+
 //
 // StreamForEach(println, StreamTake(10, nats));
 //
